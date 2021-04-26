@@ -1,0 +1,87 @@
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background-color: white;
+    width: 100%
+}
+
+.header__logo{
+    height: 25px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.header__input{
+    display: flex;
+    align-items:center;
+    width: 40%;
+    border: 1px solid rgb(168, 163, 163);
+}
+
+.header__input > input{
+    flex:1;
+    border: none;
+
+    /* self made */
+    font-size: 17px;
+    padding-left:13px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* self made */
+
+}
+
+.header__input > input:active{
+    border:rgb(214, 211, 211)
+}
+
+.header__inputButton {
+    width: 50px !important;
+    background-color: rgba(247, 245, 245, 0.774);
+    border-left: 1px solid lightgray;
+    color: gray;
+}
+ 
+.header__icons {
+    display:flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header__icon{
+    margin-right: 20px;
+}
+
+.header__inputButtonForMobile{
+    display: none !important;
+    margin-right: 20px;
+}
+.searchBarHidden{
+    flex:1;
+    border: none;
+    display:none;
+    z-index: 9999;
+    position:fixed;
+    margin-top: 25%;
+    margin-left: 10%;
+    transition: 0.5s
+}
+.searchBarHidden > input{
+    font-size: 17px;
+    padding-left:13px;
+}
+
+
+@media only screen and (max-width: 660px) {
+    .header__input {
+        display: none
+    }
+    .header__inputButtonForMobile{
+        display: flex !important;
+    }
+}
